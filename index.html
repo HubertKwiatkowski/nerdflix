@@ -13,21 +13,34 @@
   
 </head>
 <body>
-  <nav class="main-nav">
-    <div class="homepage" id="homepage">Homepage</div>
-    <div class="series" id="series">Series</div>
-    <div class="movies" id="movies">Movies</div>
-    <div class="logo"></div>
-    
-  </nav>
-  <main>
-    <nav class="section-nav">  
-      <div class="search"></div>
-      <div class="sort"></div>
-      <div class="rating"></div>
-    </nav>
+  <div class="wrapper">
+    <header class="main-nav">
+      <div class="menu">
+        <div class="homepage" id="homepage">Homepage</div>
+        <div class="series" id="series">Series</div>
+        <div class="movies" id="movies">Movies</div>
+      </div>
+      <div class="logo"></div>
+      <div class="rating">
+        <div class="star"></div>
+        <div class="rated" id="rated">0</div>
+      </div>
+    </header>
 
-  </main>
+    <main>
+      <nav class="section-nav"> 
+        <h1 class="section" id="section">Movies</h1>
+        <div class="search"></div>
+        <div class="sort">
+          <p>Sort by:</p>
+          <div class="rating"></div>
+          <div class="rating"></div>
+        </div>
+      </nav>
+      <section></section>
+    </main>
+  </div>
+
 
 </body>
 </html>

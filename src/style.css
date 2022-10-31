@@ -1,5 +1,35 @@
 :root {
+  --clr-primary-100: #131313;
+  --clr-primary-200: #171717;
+  --clr-primary-300: #2E2E2E;
+  --clr-primary-400: #FFFFFF;
+  --clr-primary-410: #ffffff88;
+  --clr-primary-500: #E50914;
 
+  --ff-primary: 'Source Sans Pro', sans-serif;
+
+  --ff-body: var(--ff-primary);
+
+  --fw-400: 400;
+
+  --fs-300: .875rem;
+  --fs-400: 1rem;
+  --fs-600: 1.875rem;
+
+  --size-400: 1rem;
+  --size-420: 1.125rem;
+  --size-520: 3.125rem;
+  /* width less than 50rem */
+  --size-600: 4.6875rem;
+  /* width 50rem */
+  --size-610: 4.6875rem;
+  /* width 80rem - figma size */
+  --size-620: 4.6875rem;
+  /* width 80rem - figma size */
+  --size-720: 6.1875rem;
+  --size-800: 7.625rem;
+  --size-810: 7.625rem;
+  --size-820: 7.625rem;
 }
 
 /* additional reset */
@@ -15,4 +45,95 @@ h1,
 html,
 body {
   min-height: 100vh;
+}
+
+body {
+  font-family: var(--ff-body);
+  font-size: var(--fs-300);
+  background-color: var(--clr-primary-300);
+  color: var(--clr-primary-400)
+}
+
+@media (min-width: 50rem) {
+  body {
+    font-size: var(--fs-400);
+  }
+}
+
+.main-nav {
+  height: var(--size-600);
+  background-color: var(--clr-primary-100);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (min-width: 50rem) {
+  .main-nav {
+    justify-content: center;
+  }
+}
+
+.menu {
+  visibility: hidden;
+  position: absolute;
+  left: 1rem;
+  color: var(--clr-primary-410);
+}
+
+@media (min-width: 50rem) {
+  .menu {
+    visibility: visible;
+    display: flex;
+    gap: 3.125rem;
+    line-height: var(--size-600);
+    left: var(--size-720);
+  }
+}
+
+.menu div:hover {
+  box-shadow: 0 -0.25rem 0 0 var(--clr-primary-500) inset;
+  color: var(--clr-primary-400);
+}
+
+.section-nav {
+  height: var(--size-800);
+  background-color: var(--clr-primary-200);
+}
+
+h1 {
+  font-size: var(--fs-600);
+}
+
+.logo {
+  width: 8.125rem;
+  height: 2.1875rem;
+  background-image: url('images/nerdflix-logo.png');
+  background-size: 8.125rem 2.1875rem;
+}
+
+.rating {
+  position: absolute;
+  right: 1rem;
+  display: flex;
+  align-items: baseline;
+}
+
+@media (min-width: 50rem) {
+  .rating {
+    right: var(--size-520);
+  }
+}
+
+
+.rating .star {
+  width: 1.125rem;
+  height: 1.125rem;
+  background-image: url('images/Star.png');
+  background-size: 1.125rem 1.125rem;
+  margin-right: 0.3125rem
+}
+
+.rating .rated {
+
 }
