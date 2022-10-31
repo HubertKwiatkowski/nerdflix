@@ -243,3 +243,13 @@ h1 {
   background-image: url('images/arrows.png');
   background-size: .5rem .875rem;
 }
+
+.movies-display {
+  margin: var(--size-720)
+}
+
+.movie-image {
+  width: 11.375rem;
+  height: 16.75rem;
+  background-size: 11.375rem 16.75rem;
+}
