@@ -13,34 +13,51 @@
   
 </head>
 <body>
-  <div class="wrapper">
-    <header class="main-nav">
-      <div class="menu">
-        <div class="homepage" id="homepage">Homepage</div>
-        <div class="series" id="series">Series</div>
-        <div class="movies" id="movies">Movies</div>
-      </div>
-      <div class="logo"></div>
-      <div class="rating">
-        <div class="star"></div>
-        <div class="rated" id="rated">0</div>
-      </div>
-    </header>
 
-    <main>
-      <nav class="section-nav"> 
-        <h1 class="section" id="section">Movies</h1>
-        <div class="search"></div>
-        <div class="sort">
-          <p>Sort by:</p>
-          <div class="rating"></div>
-          <div class="rating"></div>
+  <header class="main-nav">
+    <div class="menu">
+      <div class="homepage" id="homepage">Homepage</div>
+      <div class="series" id="series">Series</div>
+      <div class="movies" id="movies">Movies</div>
+    </div>
+    <div class="logo"></div>
+    <div class="rating">
+      <div class="star"></div>
+      <div class="rated" id="rated">0</div>
+    </div>
+  </header>
+
+  <main>
+    <header class="main-header"></header>
+    <nav class="section-nav"> 
+      <h1 class="section" id="section">Movies</h1>
+      <input class="search" placeholder="Search for a tittle"><div class="search-icon"></div></input>
+      <div class="sort">
+        <p>Sort by</p>
+        <div class="buttons">
+          <div class="dropdown">
+            <button class="sort-btn" id="sort-title">Title (A-Z)<div class="arrows"></div></button>
+            <div class="title-list dropdown-content">
+              <ul>
+                <li>(A-Z)</li>
+                <li>(Z-A)</li>
+              </ul>
+            </div>
+          </div>
+          <div class="dropdown">
+            <button class="sort-btn" id="sort-rating">Rating<div class="arrows"></div></button>
+            <div class="rating-list dropdown-content">
+              <ul>
+                <li>(1-5)</li>
+                <li>(5-1)</li>
+              </ul>
+            </div>
+          </div>
         </div>
-      </nav>
-      <section></section>
-    </main>
-  </div>
-
+      </div>
+    </nav>
+    <section></section>
+  </main>
 
 </body>
 </html>
