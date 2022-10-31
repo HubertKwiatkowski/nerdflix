@@ -12,6 +12,7 @@
 
   --fw-400: 400;
 
+  --fs-200: .75rem;
   --fs-300: .875rem;
   --fs-400: 1rem;
   --fs-600: 1.875rem;
@@ -245,11 +246,36 @@ h1 {
 }
 
 .movies-display {
-  margin: var(--size-720)
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.875rem;
+  margin: var(--size-720);
+}
+
+.single-movie {
+  margin-bottom: 2rem;
 }
 
 .movie-image {
   width: 11.375rem;
   height: 16.75rem;
-  background-size: 11.375rem 16.75rem;
+}
+
+.movie-image img {
+  border-radius: .375rem;
+}
+
+.movie-description {
+  max-width: 10.125rem;
+  margin-inline: .625rem;
+  margin-top: var(--size-400);
+  font-size: var(--fs-200);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.movie-year {
+  color: var(--clr-primary-410);
+  margin-top: 0.5rem;
 }
