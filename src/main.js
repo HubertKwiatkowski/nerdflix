@@ -10,8 +10,7 @@ async function getMovieInfo() {
     image = obj.data.movies[i].urlPoster
     movie.innerHTML += `
       <div class="single-movie">
-        <div class="movie-image"><img src="${image}" alt="${title} cover">
-        </div>
+        <div class="movie-image" style="background-image: url('${image}')"><div class="movie-rating"></div></div>
         <div class="movie-description">
           <div class="movie-title">${title}</div>
           <div class="movie-year">${year}</div>
