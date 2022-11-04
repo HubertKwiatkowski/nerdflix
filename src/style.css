@@ -201,29 +201,28 @@ h1 {
 
 .tertiary-wrapper {
   position: absolute;
-  top: -2rem;
+  bottom: calc(-1 * var(--size-460));
   width: 100%;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  justify-content: space-between;
+  align-items: flex-end;
 }
 
 @media (min-width: 90rem) {
   .tertiary-wrapper {
     bottom: calc(-1 * var(--size-460));
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
     margin-inline: auto;
   }
 }
 
 .search {
+  /* position: relative; */
   height: var(--size-500);
-  width: 100%;
-  
+  width: 15rem;
   background: var(--clr-primary-100);
   border: .0625rem solid var(--clr-primary-300);
   border-radius: .375rem;
@@ -234,7 +233,7 @@ h1 {
 
 @media (min-width: 50rem) {
   .search {
-    width: 15rem;
+    /* margin-left: var(--size-400); */
   }
 }
 
