@@ -21,13 +21,14 @@
   --size-400: 1rem;
   --size-420: 1.125rem;
   --size-440: 1.25rem;
-  --size-480: 1.1875rem;
+  --size-460: 1.5rem;
+  --size-480: 1.8175rem;
 
   --size-500: 3rem;
   --size-520: 3.125rem;
 
   --size-600: 4.6875rem;
-  --size-610: 4.6875rem;
+  --size-610: 4.6rem;
   --size-620: 4.6875rem;
 
   --size-710: 6.125rem;
@@ -67,33 +68,51 @@ body {
 }
 
 .main-nav {
+  width: 100vw;
   height: var(--size-600);
   background-color: var(--clr-primary-100);
+}
+
+.primary-wrapper {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
+  max-width: 90rem;
+  height: var(--size-600);
 }
 
-
 @media (min-width: 50rem) {
-  .main-nav {
-    justify-content: center;
+  .primary-wrapper {
+    
+  }
+}
+
+@media (min-width: 90rem) {
+  .primary-wrapper {
+    margin-inline: auto;
   }
 }
 
 .menu {
   visibility: hidden;
-  position: absolute;
-  left: 1rem;
+  left: var(--size-400);
   color: var(--clr-primary-410);
 }
 
 @media (min-width: 50rem) {
   .menu {
     visibility: visible;
+    position: absolute;
+    left: var(--size-500);
     display: flex;
     gap: 3.125rem;
     line-height: var(--size-600);
+  }
+}
+
+@media (min-width: 90rem) {
+  .menu {
     left: var(--size-720);
   }
 }
@@ -112,15 +131,21 @@ body {
 
 .rating {
   position: absolute;
-  right: var(--size-400);
+  top: var(--size-480);
+  right: var(--size-520);
   display: flex;
   align-items: baseline;
 }
 
+/* @media (min-width: 50rem) {
+  .rating {
+    right: var(--size-720);
+  }
+} */
+
 @media (min-width: 50rem) {
   .rating {
-    top: var(--size-480);
-    right: var(--size-520);
+    right: var(--size-720);
   }
 }
 
@@ -132,29 +157,73 @@ body {
   margin-right: 0.3125rem
 }
 
-main {
+.secondary-wrapper {
+  display: flex;
+  justify-content: center;
+  width: 100vw;
   height: var(--size-800);
   background-color: var(--clr-primary-200);
 }
 
-.section-nav {
-  position: relative;
-  display: flex;
-  align-items: center;
-  margin-left: var(--size-720);
+@media (min-width: 90rem) {
+  .chapter {
+    width: 90rem;
+  }
 }
 
 h1 {
   line-height: 6.125rem;
   font-weight: var(--fw-400);
   font-size: var(--fs-600);
+  
+}
+
+@media (min-width: 90rem) {
+  h1 {
+    margin-inline: var(--size-720) auto;
+  }
+}
+
+.section-nav {
+  /* temporary */
+  /* height: 1rem;  */
+
+  position: relative;
+  margin-inline: var(--size-720);
+}
+
+@media (min-width: 90rem) {
+  .section-nav {
+    width: 90rem;
+    margin-inline: auto;
+  }
+}
+
+.tertiary-wrapper {
+  position: absolute;
+  top: -2rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (min-width: 90rem) {
+  .tertiary-wrapper {
+    bottom: calc(-1 * var(--size-460));
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-inline: auto;
+  }
 }
 
 .search {
-  position: absolute;
-  top: var(--size-710);
   height: var(--size-500);
-  width: 24.625rem;
+  width: 100%;
+  
   background: var(--clr-primary-100);
   border: .0625rem solid var(--clr-primary-300);
   border-radius: .375rem;
@@ -163,20 +232,51 @@ h1 {
   outline: none;
 }
 
+@media (min-width: 50rem) {
+  .search {
+    width: 15rem;
+  }
+}
+
+@media (min-width: 90rem) {
+  .search {
+    width: 24.625rem;
+    margin-left: var(--size-720);
+  }
+}
+
 .search-icon {
   position: absolute;
-  top: 7rem;
-  left: 23rem;
+  left: 14rem;
+  bottom: var(--size-400);
   width: var(--size-440);
   height: var(--size-440);
   background-image: url('images/Shape.png');
   background-size: var(--size-440) var(--size-440);
 }
 
+@media (min-width: 90rem) {
+  .search-icon {
+    left: 23rem;
+    margin-left: var(--size-720);
+  }
+}
+
 .sort {
-  position: absolute;
-  top: 4.25rem;
-  right: var(--size-720)
+  min-width: 19rem;
+}
+
+@media (min-width: 50rem) {
+  .sort {
+    margin-left: var(--size-400);
+  }
+}
+
+@media (min-width: 90rem) {
+  .sort {
+    margin-right: var(--size-720);
+
+  }
 }
 
 .sort p {
@@ -187,6 +287,7 @@ h1 {
 .dropdown {
   display: inline-block;
   position: relative;
+  z-index: 1;
 }
 
 .sort-btn {
@@ -243,11 +344,29 @@ h1 {
   background-size: .5rem .875rem;
 }
 
+.main-section {
+  margin-inline: var(--size-400);
+}
+
+@media (min-width: 50rem) {
+  .main-section {
+    margin-inline: var(--size-500);
+  }
+}
+
+@media (min-width: 80rem) {
+  .main-section {
+    margin-inline: var(--size-720);
+  }
+}
+
 .movies-display {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
+  max-width: 80rem;
   gap: 1.875rem;
-  margin: var(--size-720);
+  margin: var(--size-720) auto;
 }
 
 .single-movie {
